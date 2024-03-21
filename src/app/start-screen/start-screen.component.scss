@@ -1,0 +1,40 @@
+@import './../../styles.scss';
+@import './../../mixin.scss';
+.start-screen {
+    background-color: #404040;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    @include flexBox(center, center);
+    flex-direction: column;
+    gap: 2.8rem;
+    >h1 {
+        font-family: 'Amita', sans-serif;
+        font-size: 3.5rem;
+        background-image: url(./../../assets/img/start/flame.gif);
+        background-size: cover;
+        background-position: center;
+        color: transparent;
+        background-clip: text;
+    }
+    >img {
+        width: 40%;
+        height: 40%;
+        object-fit: contain;
+    }
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    background-image: url('./../../assets/img/start/startlabel.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    transition: .3s;
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.5);
+    }
+}
