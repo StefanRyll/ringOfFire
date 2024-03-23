@@ -1,11 +1,47 @@
 @import "./../../styles.scss";
 @import "./../../mixin.scss";
 section {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  background-image: url("./../../assets/img/board.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include flexBox(center, center);
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url("./../../assets/img/board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flexBox(center,
+    center);
+}
+
+.card-stack {
+    position: relative;
+    img {
+        position: absolute;
+        width: 6.5rem;
+    }
+    .top-card {
+        cursor: pointer;
+        right: 20px;
+        transition: 0.125s ease;
+        &:hover {
+            transform: scale(1.05) translateY(-0.8rem);
+        }
+    }
+}
+
+.pick-card {
+    animation: pick-card-animation 1s ease;
+}
+
+@keyframes pick-card-animation {
+    from {
+        transform: scale(1) rotateY(0deg);
+    }
+    to {
+        transform: scale(1.7) rotateY(360deg);
+    }
+    50% {
+        transform: scale(1.7) rotateY(360deg);
+    }
+    100% {
+        transform: scale(1) translateX(4rem) translateY(-5rem);
+    }
 }
