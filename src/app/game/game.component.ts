@@ -11,12 +11,12 @@ import { Game } from '../../modules/game';
 })
 export class GameComponent {
   pickCardAnimation = false;
-  currentCard:string | undefined = '';
+  // currentCard:string | undefined = '';
+  currentCard:any = '';
   game: Game;
 
   constructor() {
     this.game = new Game();
-    console.log(this.game);
   }
   
   takeCard() {
@@ -24,10 +24,13 @@ export class GameComponent {
     this.currentCard = this.game.stack.pop();
     console.log(this.currentCard);
     this.pickCardAnimation = true;
+    console.log('New Card ' + this.currentCard);
+    console.log('Game is ' + this.game);
     
     setTimeout(() => {
+      this.game.playedCards.push(this.currentCard);
       this.pickCardAnimation = false;
-    }, 1500);
+    }, 1000);
   }
   }
 }
