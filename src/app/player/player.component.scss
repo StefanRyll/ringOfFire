@@ -1,0 +1,24 @@
+@import "./../../styles.scss";
+@import "./../../mixin.scss";
+section {
+    @include fontAmita();
+    @include flexBox(flex-start, center);
+    width: 12rem;
+    background: orange;
+    padding: .3rem;
+    gap: 1rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 5px 5px 15px 0 #000000;
+    span {
+        font-size: 1.1rem;
+    }
+    img {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: cover;
+        border-radius: 100%;
+        box-shadow: 5px 5px 15px 0 #000000;
+        filter: brightness(0.9);
+    }
+}

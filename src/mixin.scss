@@ -1,5 +1,9 @@
 @mixin flexBox($just, $align) {
-  display: flex;
-  justify-content: $just;
-  align-items: $align;
+    display: flex;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin fontAmita() {
+    font-family: 'Amita', sans-serif;
 }
