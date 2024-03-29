@@ -1,3 +1,9 @@
-section {
-    background-color: #ffd740;
+@import "./../../styles.scss";
+@import "./../../mixin.scss";
+h2,
+p,
+input,
+button,
+mat-label {
+    @include fontAmita();
 }

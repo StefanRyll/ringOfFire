@@ -9,13 +9,13 @@
     flex-direction: column;
     gap: 2.8rem;
     >h1 {
-        font-family: 'Amita', sans-serif;
-        font-size: 3.5rem;
+        font: 400 3.5rem / 70px 'Amita', sans-serif !important;
         background-image: url(./../../assets/img/start/flame.gif);
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         color: transparent;
         background-clip: text;
+        -webkit-background-clip: text;
     }
     >img {
         width: 40%;

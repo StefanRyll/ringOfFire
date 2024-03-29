@@ -4,12 +4,11 @@
         <p>Bitte Namen eingeben</p>
         <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="name" />
         </mat-form-field>
     </mat-dialog-content>
     <mat-dialog-actions>
-        <button mat-button cdkFocusInitial>
-        <mat-icon>how_to_reg</mat-icon>
-    </button>
+        <button mat-button mat-dialog-close>No Thanks</button>
+        <button mat-button [mat-dialog-close]='name' (click)="addPlayer()" cdkFocusInitial><mat-icon>how_to_reg</mat-icon></button>
     </mat-dialog-actions>
 </section>

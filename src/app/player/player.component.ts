@@ -10,5 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PlayerComponent {
 
-  @Input() name:string = '';
+  @Input() name:string = ''; // wird aus der schleife im addPlayer-Component geoutput.
 }
