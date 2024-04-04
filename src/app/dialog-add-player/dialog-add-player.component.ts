@@ -21,8 +21,8 @@ import {MatButtonModule} from '@angular/material/button';
 export class DialogAddPlayerComponent {
 
   constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<DialogAddPlayerComponent>) {
-    this.dialogRef.disableClose = true;
   }
-
+  
 name:string = '';
 }
+

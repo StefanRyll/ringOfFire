@@ -4,6 +4,8 @@ export class Game {
     public playedCards:(string | undefined)[] = [];
     public currentPlayer:number = 0;
 
+    
+
     constructor() {
         for (let i = 1; i < 14; i++) {
             this.stack.push('ace_' + i);
@@ -29,7 +31,6 @@ function shuffle(array:string[]) {
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-  
     return array;
   }
   

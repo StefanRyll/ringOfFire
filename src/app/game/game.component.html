@@ -13,7 +13,7 @@
     </div>
 </section>
 
-<app-game-info [card]="currentCard" class="game-info-container"></app-game-info>
+<app-game-info *ngIf="this.game.players.length > 0" [card]="currentCard" class="game-info-container"></app-game-info>
 
 <button (click)="openDialog()" class="add-btn" mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
     <mat-icon>add</mat-icon>

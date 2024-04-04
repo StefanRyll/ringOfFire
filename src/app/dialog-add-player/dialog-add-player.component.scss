@@ -1,5 +1,14 @@
 @import "./../../styles.scss";
 @import "./../../mixin.scss";
+section {
+    background: lemonchiffon;
+}
+
+button {
+    background: #ffd740;
+    border: solid 2px black;
+}
+
 h2,
 p,
 input,

@@ -3,3 +3,8 @@
 mat-card-title {
     @include fontAmita();
 }
+
+mat-card {
+    background: #ffd740;
+    border: solid 3px black;
+}
