@@ -1,5 +1,5 @@
 export class Game {
-    public players:string[] = ['Stefan','Mina','Kay'];
+    public players:string[] = [];
     public stack:string[] = [];
     public playedCards:(string | undefined)[] = [];
     public currentPlayer:number = 0;
@@ -11,13 +11,12 @@ export class Game {
             this.stack.push('diamonds_' + i);
             this.stack.push('hearts_' + i);
         }
-
         shuffle(this.stack);
     }
 }
 
 function shuffle(array:string[]) {
-    let currentIndex = array.length,  randomIndex;
+    let currentIndex = array.length, randomIndex;
   
     // While there remain elements to shuffle.
     while (currentIndex > 0) {

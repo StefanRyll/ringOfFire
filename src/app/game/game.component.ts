@@ -7,13 +7,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
+import { GameInfoComponent } from '../game-info/game-info.component';
 
 
 
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, PlayerComponent, DialogAddPlayerComponent, MatButtonModule, MatIconModule, MatDialogModule],
+  imports: [CommonModule, PlayerComponent, DialogAddPlayerComponent, GameInfoComponent, MatButtonModule, MatIconModule, MatDialogModule],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss',
 })
@@ -42,8 +43,10 @@ export class GameComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      this.game.players.push(result);
+    dialogRef.afterClosed().subscribe(name => {
+      if(name.length > 0) {
+        this.game.players.push(name);
+      }
     });
   }
 }

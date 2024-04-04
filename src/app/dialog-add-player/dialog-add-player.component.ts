@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogClose } from '@angular/material/dialog';
+import { MatDialog, MatDialogClose, MatDialogRef } from '@angular/material/dialog';
 import { MatDialogContent } from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatDialogActions } from '@angular/material/dialog';
@@ -20,11 +20,9 @@ import {MatButtonModule} from '@angular/material/button';
 
 export class DialogAddPlayerComponent {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public dialogRef: MatDialogRef<DialogAddPlayerComponent>) {
+    this.dialogRef.disableClose = true;
+  }
 
 name:string = '';
-
-addPlayer() {
-
-}
 }

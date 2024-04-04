@@ -3,8 +3,8 @@
 section {
     @include fontAmita();
     @include flexBox(flex-start, center);
-    width: 12rem;
-    background: orange;
+    width: 10rem;
+    background: grey;
     padding: .3rem;
     gap: 1rem;
     border-top-left-radius: 50px;
@@ -21,4 +21,9 @@ section {
         box-shadow: 5px 5px 15px 0 #000000;
         filter: brightness(0.9);
     }
+}
+
+.player-active {
+    width: 12rem;
+    background: orange;
 }

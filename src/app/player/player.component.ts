@@ -9,6 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './player.component.scss'
 })
 export class PlayerComponent {
-
-  @Input() name:string = ''; // wird aus der schleife im addPlayer-Component geoutput.
+  
+  // wird aus der schleife im addPlayer-Component geoutput.
+  @Input() name:string = '';
+  @Input() playerActive:boolean = false;
 }
